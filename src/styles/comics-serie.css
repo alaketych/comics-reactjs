@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #212635;
+}
+
+nav ul {
+    font-family: 'Anton', sans-serif;
+    list-style: none;
+    background-color: #151923;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+nav li {
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #888;
+}
+
+nav a {
+    text-decoration:none;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: block;
+}
+
+nav a.active {
+    background: #0078f0;
+    color: #ffffff;
+    height: 5px;
+    cursor: default;
+}
+
+nav a:hover {
+    color: #a2a2a2;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+header img {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #863e0c;
+}
+
+.two-section {
+    font-family: 'Anton', sans-serif;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.two-section li {
+    float: left;
+    padding: 16px;
+}
+
+.two-section a {
+    text-decoration:none;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: block;
+}
+
+.two-section a.active {
+    background: #0078f0;
+    color: #ffffff;
+    height: 5px;
+    cursor: default;
+}
+
+.two-section a:hover {
+    color: #151923;
+}
+
+.serie-inforamtion {
+    display: flex;
+    background: #b76533;
+    width: 100%;
+    color: #ffffff;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.serie-poster {
+    width: 25%;
+    padding: 3%;
+}
+
+.serie-poster img {
+    width: 100%;
+    border: 10px solid #863e0c;
+}
+
+.serie-full-description {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.serie-full-description h1 {
+    font-size: 27px;
+}
+
+.serie-person {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.frst-sectn {
+    padding: 3%;
+    width: 100%;
+}
+
+.scnd-sectn {
+    padding: 3%;
+    width: 100%;
+}
+
+.role {
+    text-transform: uppercase;
+    color: #000000;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+}
+
+.serie-episodes {
+    display: flex;
+    flex-direction: row;
+    background: #41210B;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.episode {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    width: 25%;
+    padding: 1%;
+}
+
+.episode img {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    height: 10vh;
+    background: #151923;
+  }
+
+@media screen and (min-width: 600px) {
+    nav li {
+      width: 120px;
+      border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: -4px;
+    }
+}
