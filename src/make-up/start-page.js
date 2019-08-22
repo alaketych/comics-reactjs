@@ -1,154 +1,23 @@
 import React, { Component } from "react";
+import BookPage from "./book-page";
+import ArticlePage from "./article-page";
 import "../styles/start-page.css";
+import Navigation from "../components/Navigation";
+import AllSection from "../components/start-page/AllSection";
 
-import Navigation from "../components/start-page/Navigation";
-import TitleSection from "../components/start-page/TitleSection";
-import ComicsPreview from "../components/start-page/ComicsPreview";
-import ArticlePreview from "../components/start-page/ArticlePreview";
-import BrowseMoreButton from "../components/start-page/BrowseMoreButton"
+import { Switch, Route} from "react-router-dom";
 
-class StartPage extends Component {
+export default class StartPage extends Component {
   render() {
       return (
         <div className="StartPage">
-
           <Navigation></Navigation>
-
-          <section>
-            <TitleSection listName = "Series"/>
-
-            <div class="comics-list">
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-            </div>
-          </section>
-
-          <section>
-            <TitleSection listName = "Comics books"/>
-
-            <div class="comics-list">
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-            </div>
-          </section>
-
-          <section>
-            <TitleSection listName = "Animated Series"/>
-
-            <div class="comics-list">
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-
-              <ComicsPreview comicsCover = {require('../images/comics/4_00.jpg')}
-                             comicsName  = "Doom Patrol"
-                             comicsIssue  = "1 season"/>
-            </div>
-          </section>
-
-          <section>
-            <TitleSection listName = "Popular articles"/>
-
-            <div className="comics-list">
-              <ArticlePreview articleCover = {require('../images/comics/4_00.jpg')}
-                              articleName = "Where to Start Reading Flash Comics"
-                              articleAuthor = "laketych"/>
-
-              <ArticlePreview articleCover = {require('../images/comics/4_00.jpg')}
-                              articleName = "Where to Start Reading Flash Comics"
-                              articleAuthor = "laketych"/>
-
-              <ArticlePreview articleCover = {require('../images/comics/4_00.jpg')}
-                              articleName = "Where to Start Reading Flash Comics"
-                              articleAuthor = "laketych"/>
-
-              <ArticlePreview articleCover = {require('../images/comics/4_00.jpg')}
-                              articleName = "Where to Start Reading Flash Comics"
-                              articleAuthor = "laketych"/>
-
-              <ArticlePreview articleCover = {require('../images/comics/4_00.jpg')}
-                              articleName = "Where to Start Reading Flash Comics"
-                              articleAuthor = "laketych"/>
-            </div>
-          </section>
-
-          <BrowseMoreButton/>
-
-          <footer>
-          </footer>
+          <Switch>
+            <Route path="/" exact      component={ AllSection }/>
+            <Route path="/comics-book" component={ BookPage }/>
+            <Route path="/articles"     component={ ArticlePage }/>
+          </Switch>
         </div>
     )
   }
 }
-
-export default StartPage;

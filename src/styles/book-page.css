@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url("../images/backgrounds/bg-footer-comichub.jpg");
+
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .page-title {
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Blinker', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
+  }
+
+  .section {
+    display: grid;
+    width: 100%;
+    padding: 40px;
+    color: #0078f0;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 25px;
+  }
+
+  .particullar-comics {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    flex-direction: column;
+  }
+
+  .particullar-comics img {
+    max-width: 100%;
+    background: cover;
+  }
+
+  .particullar-comics:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .icon-name {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Crete Round', serif;
+  }
+
+  .icon-desc {
+    font-size: 15px;
+    color: #888;
+    font-family: 'Crete Round', serif;
+  }
+
+  @media screen and (min-width: 600px) {
+    nav li {
+      width: 120px;
+      border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: -4px;
+    }
+  }
